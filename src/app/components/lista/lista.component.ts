@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Tarea } from '../../models/tarea.model';
 
 @Component({
   selector: 'app-lista',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaComponent implements OnInit {
 
+  @Input() tareas: Tarea[] = [];
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onClick(pTarea: Tarea){
+    pTarea.completa = !pTarea.completa;
   }
 
 }
