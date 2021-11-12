@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todoListAngular';
+
+  onTareaCreada($event: any){
+    console.log($event);
+  }
 }
