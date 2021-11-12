@@ -19,4 +19,8 @@ export class ListaComponent implements OnInit {
     pTarea.completa = !pTarea.completa;
   }
 
+  onEliminar(i: any){
+    this.tareas.splice(i, 1);
+  }
+
 }
